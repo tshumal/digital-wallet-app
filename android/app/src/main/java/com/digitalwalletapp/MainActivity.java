@@ -1,6 +1,8 @@
 package com.digitalwalletapp;
 
+import android.os.Bundle;
 import com.facebook.react.ReactActivity;
+import org.devio.rn.splashscreen.SplashScreen; // here
 
 public class MainActivity extends ReactActivity {
 
@@ -12,4 +14,13 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "DigitalWalletApp";
   }
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    SplashScreen.show(this);  // here
+
+  }
 }
+
+

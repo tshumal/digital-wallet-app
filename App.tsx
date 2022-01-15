@@ -60,7 +60,7 @@ const App = () => {
 
   React.useEffect(() => {
     SplashScreen.hide()
-  })
+  }, [])
 
   const isDarkMode = useColorScheme() === 'dark';
 
