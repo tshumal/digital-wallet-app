@@ -26,6 +26,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import SplashScreen from "react-native-splash-screen";
 
 const Section: React.FC<{
   title: string;
@@ -56,6 +57,11 @@ const Section: React.FC<{
 };
 
 const App = () => {
+
+  React.useEffect(() => {
+    SplashScreen.hide()
+  })
+
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
